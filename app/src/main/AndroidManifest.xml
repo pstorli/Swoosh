@@ -11,18 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- WelcomeActivity -->
+        <!-- Welcome Activity -->
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- LeagueActivity -->
-        <activity android:name=".LeagueActivity">
-        </activity>
+        <!-- League Activity -->
+        <activity android:name=".LeagueActivity"/>
 
+        <!-- Meta Data-->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
