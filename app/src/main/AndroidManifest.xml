@@ -23,6 +23,9 @@
         <!-- League Activity -->
         <activity android:name=".LeagueActivity"/>
 
+        <!-- Skill Activity -->
+        <activity android:name=".SkillActivity"/>
+
         <!-- Meta Data-->
         <meta-data
             android:name="preloaded_fonts"

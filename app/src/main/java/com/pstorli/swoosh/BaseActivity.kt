@@ -17,7 +17,7 @@ open class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        Log.d(TAG, "OnCreate ${javaClass.simpleName}")
+        Log.d(TAG, "OnCreate  ${javaClass.simpleName}")
     }
 
     /**
@@ -25,7 +25,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onStart() {
         super.onStart()
-        Log.d(TAG, "OnStart  ${javaClass.simpleName}")
+        Log.d(TAG, "OnStart   ${javaClass.simpleName}")
     }
 
     /**
@@ -33,7 +33,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "OnResume ${javaClass.simpleName}")
+        Log.d(TAG, "OnResume  ${javaClass.simpleName}")
     }
 
     /**
@@ -53,7 +53,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onPause() {
         super.onPause()
-        Log.d(TAG, "OnPause  ${javaClass.simpleName}")
+        Log.d(TAG, "OnPause   ${javaClass.simpleName}")
     }
 
     /**
@@ -61,7 +61,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onStop() {
         super.onStop()
-        Log.d(TAG, "OnStop   ${javaClass.simpleName}")
+        Log.d(TAG, "OnStop    ${javaClass.simpleName}")
     }
 
     /**

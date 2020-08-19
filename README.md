@@ -12,4 +12,4 @@ Issues Resolved in 1000
   0000 Added BaseActivity with logging for the various activity lifecycles
   
 Known Issues:
-  0000 None
+  0000 Need to make landscape and tablet screens
