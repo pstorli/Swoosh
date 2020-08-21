@@ -14,7 +14,7 @@
     <string name="womens">Womens</string>
     <string name="coed">Co-ed</string>
 
-    <string name="i_am_a">I am a</string>
+    <string name="search_leagues_text">I am a</string>
 
     <string name="beginner">Beginnner</string>
 
@@ -23,4 +23,10 @@
     <string name="finish">Finish</string>
 
     <string name="selected">Selected %1$s</string>
+    <string name="league_undefined">league undefined</string>
+
+    <!-- Looking for $league $skill league near you ... -->
+    <string name="looking_for_skill">Looking for %1$s %2$s league near you …</string>
+    <string name="i_am_a">I am a</string>
+
 </resources>

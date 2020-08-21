@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/beginnerballerbg"
-    tools:context=".LeagueActivity">
+    tools:context=".controller.SkillActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/exercisebg"
+        android:contentDescription="@string/baller" />
 
     <ImageView
         android:id="@+id/imageViewLogo"
         android:layout_width="88dp"
         android:layout_height="29dp"
         android:layout_marginTop="32dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/baller"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,21 +32,19 @@
         app:srcCompat="@drawable/swooshlogo" />
 
     <TextView
-        android:id="@+id/textViewIAmA"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:id="@+id/searchLeagueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="96dp"
-        android:singleLine="false"
         android:text="@string/i_am_a"
-        android:textAlignment="center"
-        android:textColor="@color/silver"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButtonParent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/toggleButtonParent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -59,6 +69,7 @@
             android:textColor="@android:color/white"
             android:textOff="@string/beginner"
             android:textOn="@string/beginner"
+            android:onClick="onBeginnerClicked"
             android:textSize="@dimen/btn_toggle_font" />
 
         <ToggleButton
@@ -75,6 +86,7 @@
             android:paddingBottom="8dp"
             android:text="@string/baller"
             android:textColor="@android:color/white"
+            android:onClick="onBallerClicked"
             android:textOff="@string/baller"
             android:textOn="@string/baller"
             android:textSize="@dimen/btn_toggle_font" />
@@ -90,6 +102,7 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/button_back"
         android:text="@string/finish"
+        android:onClick="onSkillFinishedClicked"
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/btn_nav_font"
         app:layout_constraintBottom_toBottomOf="parent"

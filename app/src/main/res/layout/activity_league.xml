@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/desiredleaguebg"
-    tools:context=".LeagueActivity">
+    tools:context=".controller.LeagueActivity">
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
 
-    <com.pstorli.swoosh.ToggleGroup
+    <com.pstorli.swoosh.util.ToggleGroup
         android:id="@+id/leagueRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toggleButtonWomens" />
 
-    </com.pstorli.swoosh.ToggleGroup>
+    </com.pstorli.swoosh.util.ToggleGroup>
 
     <Button
         android:id="@+id/buttonNext"

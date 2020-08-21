@@ -1,9 +1,10 @@
-package com.pstorli.swoosh
+package com.pstorli.swoosh.controller
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
+import com.pstorli.swoosh.R
+import com.pstorli.swoosh.util.EXTRA_LEAGUE
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -25,7 +26,7 @@ class LeagueActivity : BaseActivity() {
         // Listen for clicks on the league toggle butons.
         leagueRadioGroup.setOnClickListener() {
             updateLeague (it.id)
-            Toast.makeText (this, getString(R.string.selected, getSelectedLeagueName ()), Toast.LENGTH_SHORT).show()
+            //Toast.makeText (this, getString (R.string.selected, getSelectedLeagueName ()), Toast.LENGTH_SHORT).show()
         }
 
         // Initial setup
@@ -39,9 +40,9 @@ class LeagueActivity : BaseActivity() {
     {
         var selLeagueName = ""
         when (selLeagueId) {
-            R.id.toggleButtonMens   -> selLeagueName = getString(R.string.mens)
+            R.id.toggleButtonMens -> selLeagueName = getString(R.string.mens)
             R.id.toggleButtonWomens -> selLeagueName = getString(R.string.womens)
-            R.id.toggleButtonCoed   -> selLeagueName = getString(R.string.coed)
+            R.id.toggleButtonCoed -> selLeagueName = getString(R.string.coed)
         }
         return selLeagueName
     }
@@ -63,7 +64,13 @@ class LeagueActivity : BaseActivity() {
      */
     fun buttonNextClicked(@Suppress("UNUSED_PARAMETER")view: View)
     {
+        // Get your intent straight.
         val skillIntent = Intent (this, SkillActivity::class.java)
-        startActivity(skillIntent)
+
+        // Add some extras.
+        skillIntent.putExtra (EXTRA_LEAGUE, getSelectedLeagueName ())
+
+        // Fire her up!
+        startActivity (skillIntent)
     }
 }

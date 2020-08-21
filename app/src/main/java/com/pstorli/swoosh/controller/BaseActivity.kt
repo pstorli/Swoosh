@@ -1,11 +1,13 @@
-package com.pstorli.swoosh
+package com.pstorli.swoosh.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.pstorli.swoosh.util.*
 import android.util.Log
+import com.pstorli.swoosh.util.LOG_LIFECYCLE_EVENTS
 
 open class BaseActivity : AppCompatActivity() {
-    val TAG = "LifeCycle"
+
 
     // /////////////////////////////////////////////////////////////////////////////////////////////
     // Starting
@@ -17,7 +19,7 @@ open class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        Log.d(TAG, "OnCreate  ${javaClass.simpleName}")
+        if (LOG_LIFECYCLE_EVENTS) Log.d(TAG, "OnCreate  ${javaClass.simpleName}")
     }
 
     /**
@@ -25,7 +27,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onStart() {
         super.onStart()
-        Log.d(TAG, "OnStart   ${javaClass.simpleName}")
+        if (LOG_LIFECYCLE_EVENTS) Log.d(TAG, "OnStart   ${javaClass.simpleName}")
     }
 
     /**
@@ -33,7 +35,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "OnResume  ${javaClass.simpleName}")
+        if (LOG_LIFECYCLE_EVENTS) Log.d(TAG, "OnResume  ${javaClass.simpleName}")
     }
 
     /**
@@ -41,7 +43,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onRestart() {
         super.onRestart()
-        Log.d(TAG, "OnRestart ${javaClass.simpleName}")
+        if (LOG_LIFECYCLE_EVENTS) Log.d(TAG, "OnRestart ${javaClass.simpleName}")
     }
 
     // /////////////////////////////////////////////////////////////////////////////////////////////
@@ -53,7 +55,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onPause() {
         super.onPause()
-        Log.d(TAG, "OnPause   ${javaClass.simpleName}")
+        if (LOG_LIFECYCLE_EVENTS) Log.d(TAG, "OnPause   ${javaClass.simpleName}")
     }
 
     /**
@@ -61,7 +63,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onStop() {
         super.onStop()
-        Log.d(TAG, "OnStop    ${javaClass.simpleName}")
+        if (LOG_LIFECYCLE_EVENTS) Log.d(TAG, "OnStop    ${javaClass.simpleName}")
     }
 
     /**
@@ -69,6 +71,6 @@ open class BaseActivity : AppCompatActivity() {
      */
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(TAG, "OnDestroy ${javaClass.simpleName}")
+        if (LOG_LIFECYCLE_EVENTS) Log.d(TAG,"OnDestroy ${javaClass.simpleName}")
     }
 }
