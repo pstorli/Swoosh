@@ -36,23 +36,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
 
-    <LinearLayout
-        android:layout_width="0dp"
+    <com.pstorli.swoosh.ToggleGroup
+        android:id="@+id/leagueRadioGroup"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDesiredLeague"
-        app:layout_constraintVertical_bias="0.14999998">
+        app:layout_constraintTop_toBottomOf="@+id/textViewDesiredLeague">
 
         <ToggleButton
             android:id="@+id/toggleButtonMens"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/swoosh_toggle"
             android:checked="true"
             android:text="@string/mens"
@@ -65,28 +67,34 @@
             android:id="@+id/toggleButtonWomens"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
             android:background="@drawable/swoosh_toggle"
             android:text="@string/womens"
             android:textColor="@android:color/white"
             android:textOff="@string/womens"
             android:textOn="@string/womens"
-            android:textSize="@dimen/btn_toggle_font" />
+            android:textSize="@dimen/btn_toggle_font"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toggleButtonMens"/>
 
         <ToggleButton
             android:id="@+id/toggleButtonCoed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:background="@drawable/swoosh_toggle"
-            android:text="@string/co_ed"
+            android:text="@string/coed"
             android:textColor="@android:color/white"
-            android:textOff="@string/co_ed"
-            android:textOn="@string/co_ed"
+            android:textOff="@string/coed"
+            android:textOn="@string/coed"
             android:textSize="@dimen/btn_toggle_font"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toggleButtonWomens" />
+
+    </com.pstorli.swoosh.ToggleGroup>
 
     <Button
         android:id="@+id/buttonNext"
