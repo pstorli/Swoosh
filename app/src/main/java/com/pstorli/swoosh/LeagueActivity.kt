@@ -3,6 +3,7 @@ package com.pstorli.swoosh
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -24,10 +25,25 @@ class LeagueActivity : BaseActivity() {
         // Listen for clicks on the league toggle butons.
         leagueRadioGroup.setOnClickListener() {
             updateLeague (it.id)
+            Toast.makeText (this, getString(R.string.selected, getSelectedLeagueName ()), Toast.LENGTH_SHORT).show()
         }
 
         // Initial setup
         updateLeague (selLeagueId)
+    }
+
+    /**
+     * Get the selected league name.
+     */
+    fun getSelectedLeagueName (): String
+    {
+        var selLeagueName = ""
+        when (selLeagueId) {
+            R.id.toggleButtonMens   -> selLeagueName = getString(R.string.mens)
+            R.id.toggleButtonWomens -> selLeagueName = getString(R.string.womens)
+            R.id.toggleButtonCoed   -> selLeagueName = getString(R.string.coed)
+        }
+        return selLeagueName
     }
 
     /**
