@@ -1,4 +1,4 @@
-package com.pstorli.swoosh.util
+package com.pstorli.swoosh.utilities
 
 import android.content.Context
 import android.util.AttributeSet

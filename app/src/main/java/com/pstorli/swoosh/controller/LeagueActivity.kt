@@ -4,7 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.pstorli.swoosh.R
-import com.pstorli.swoosh.util.EXTRA_LEAGUE
+import com.pstorli.swoosh.model.Player
+import com.pstorli.swoosh.utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -12,6 +13,7 @@ class LeagueActivity : BaseActivity() {
     // The currently selected league. Mens by default.
     var selLeagueId = R.id.toggleButtonMens
 
+    var player = Player ("","")
     /**
      * On Create
      */
@@ -57,6 +59,12 @@ class LeagueActivity : BaseActivity() {
 
         // Check that one.
         leagueRadioGroup.check (id)
+
+        when (selLeagueId) {
+            R.id.toggleButtonMens   -> player.league = getString(R.string.mens)
+            R.id.toggleButtonWomens -> player.league = getString(R.string.womens)
+            R.id.toggleButtonCoed   -> player.league = getString(R.string.coed)
+        }
     }
 
     /**
@@ -68,7 +76,7 @@ class LeagueActivity : BaseActivity() {
         val skillIntent = Intent (this, SkillActivity::class.java)
 
         // Add some extras.
-        skillIntent.putExtra (EXTRA_LEAGUE, getSelectedLeagueName ())
+        skillIntent.putExtra (EXTRA_PLAYER, player)
 
         // Fire her up!
         startActivity (skillIntent)

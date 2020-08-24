@@ -23,7 +23,8 @@
     <string name="finish">Finish</string>
 
     <string name="selected">Selected %1$s</string>
-    <string name="league_undefined">league undefined</string>
+    <string name="league_undefined">League undefined!</string>
+    <string name="skill_undefined">Skill undefined!</string>
 
     <!-- Looking for $league $skill league near you ... -->
     <string name="looking_for_skill">Looking for %1$s %2$s league near you …</string>

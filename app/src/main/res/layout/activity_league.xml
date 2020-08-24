@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
 
-    <com.pstorli.swoosh.util.ToggleGroup
+    <com.pstorli.swoosh.utilities.ToggleGroup
         android:id="@+id/leagueRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toggleButtonWomens" />
 
-    </com.pstorli.swoosh.util.ToggleGroup>
+    </com.pstorli.swoosh.utilities.ToggleGroup>
 
     <Button
         android:id="@+id/buttonNext"

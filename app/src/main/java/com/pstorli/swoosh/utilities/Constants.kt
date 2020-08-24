@@ -1,4 +1,4 @@
-package com.pstorli.swoosh.util
+package com.pstorli.swoosh.utilities
 
 import android.util.Log
 
@@ -8,8 +8,8 @@ import android.util.Log
 
 const val TAG                       = "LifeCycle"
 const val LOG_LIFECYCLE_EVENTS      = false
-const val EXTRA_LEAGUE              = "league"
-const val EXTRA_SKILL               = "skill"
+const val EXTRA_PLAYER              = "player"
+
 
 /**
  * Log it baby. // TODO: Does not currently work due to access?

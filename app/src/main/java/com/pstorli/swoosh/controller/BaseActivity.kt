@@ -2,9 +2,9 @@ package com.pstorli.swoosh.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.pstorli.swoosh.util.*
+import com.pstorli.swoosh.utilities.*
 import android.util.Log
-import com.pstorli.swoosh.util.LOG_LIFECYCLE_EVENTS
+import com.pstorli.swoosh.utilities.LOG_LIFECYCLE_EVENTS
 
 open class BaseActivity : AppCompatActivity() {
 
