@@ -3,6 +3,7 @@ Name: Swoosh
 Date:    9 Aug 2020
 Author:  Pete Storli\
 Email:   pstorli@gmail.com\
+Resume:  https://sites.google.com/site/storlidesignsllc/home/resume
 Phone:   971-888-2534\
 Address: 18529 Chemawa Lne NE, Silverton, OR 97381\
 
